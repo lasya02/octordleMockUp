@@ -11,6 +11,7 @@
 		A8A579322A701E5700452CCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579312A701E5700452CCB /* ContentView.swift */; };
 		A8A579342A701E5900452CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A579332A701E5900452CCB /* Assets.xcassets */; };
 		A8A579372A701E5900452CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A579362A701E5900452CCB /* Preview Assets.xcassets */; };
+		A8A5793E2A7022B700452CCB /* WordleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5793D2A7022B700452CCB /* WordleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A8A579312A701E5700452CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8A579332A701E5900452CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8A579362A701E5900452CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8A5793D2A7022B700452CCB /* WordleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A8A5792F2A701E5700452CCB /* OctordleMockUpApp.swift */,
 				A8A579312A701E5700452CCB /* ContentView.swift */,
+				A8A5793D2A7022B700452CCB /* WordleView.swift */,
 				A8A579332A701E5900452CCB /* Assets.xcassets */,
 				A8A579352A701E5900452CCB /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A5793E2A7022B700452CCB /* WordleView.swift in Sources */,
 				A8A579322A701E5700452CCB /* ContentView.swift in Sources */,
 				A8A579302A701E5700452CCB /* OctordleMockUpApp.swift in Sources */,
 			);
