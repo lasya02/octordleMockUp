@@ -17,20 +17,20 @@ struct KeyboardView: View {
 
     var body: some View {
         VStack{
-            HStack(alignment: .center, spacing: 2){
+            HStack(alignment: .center, spacing: 4){
                 ForEach(string1, id: \.self){index1 in
                     LetterView(letter: index1)
                     
                 }
                 //iterate over each of the characters in the string using the id of self
             }
-            HStack(alignment: .center, spacing: 2){
+            HStack(alignment: .center, spacing: 4){
                 ForEach(string2, id: \.self){index2 in
                     LetterView(letter: index2)
                     
                 }
             }
-            HStack(alignment: .center, spacing: 2){
+            HStack(alignment: .center, spacing: 4){
                 Button {
                     dm.enterWord()
                 } label: {
@@ -40,7 +40,7 @@ struct KeyboardView: View {
                         .frame(width: 26,height: 10)
                         .padding(.horizontal,10)
                         .padding(.vertical,10)
-                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemCyan)))
+                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.black)))
                 }
                 .disabled(dm.currentGuess.count != 5)
                 //enter button
@@ -59,7 +59,7 @@ struct KeyboardView: View {
                         .frame(width: 26,height: 10)
                         .padding(.horizontal,10)
                         .padding(.vertical,10)
-                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemCyan)))
+                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.black)))
                 }
                 .disabled(dm.currentGuess.isEmpty)
                 //delete button

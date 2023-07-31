@@ -13,10 +13,11 @@ class OctordleGuess: ObservableObject {
    
     //hold the guesses for octordle -> 13 options (hold the previously guessed words)
     @Published var index: Int = 0
-//    @Published var keyColors = [String: Color] ()
     var guessNumber: Int = 0
     var currentGuess: String = ""
     var correctWords = [String]()
+    var guessedCorrectly = [Bool]()
+    @Published var isEntered = [Bool]()
     
     @Published var octordleKeyboard = [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ]
     var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".map { String($0)}
@@ -40,8 +41,10 @@ class OctordleGuess: ObservableObject {
         }
         for index in 0..<8{
             for character in letters{
-                octordleKeyboard[index][String(character)] = .gray
+                octordleKeyboard[index][String(character)] = .clear
             }
+            guessedCorrectly.append(false)
+            isEntered.append(false)
         }
         
         
@@ -93,12 +96,17 @@ class OctordleGuess: ObservableObject {
     func enterWord(){
         
         let currentGuessArray = currentGuess.map { String($0)}
+      
         
         if verifyWord(){
             for screens in 0..<8 {
                 let correctWord = correctWords[screens].map { String($0)}
                 var correctLetters: [String] = []
-    //            var misplacedLetters: [String] = []
+                var misplacedLetters: [String] = []
+                
+                if currentGuessArray == correctWord{
+                    guessedCorrectly[screens] = true
+                }
                 
                 for letterIndex in 0..<5{
                     let currentGuessLetter = currentGuessArray[letterIndex]
@@ -106,28 +114,43 @@ class OctordleGuess: ObservableObject {
                     if currentCorrectLetter == currentGuessLetter{
                         octordleKeyboard[screens][currentGuessLetter] = .cyan
                         correctLetters.append(currentGuessLetter)
+                        guessedWords[guessNumber].backgroundColors[screens][letterIndex] = Color.cyan
                         print("correct")
+                        
                     }
                     print("\(correctLetters)")
                     if correctWord.contains(currentGuessLetter) {
                         if !(correctLetters.contains(currentGuessLetter)){
-                            print("entered loop correctly")
+                            //print("entered loop correctly")
                             octordleKeyboard[screens][currentGuessLetter] = Color.yellow
+                            misplacedLetters.append(currentGuessLetter)
+                            guessedWords[guessNumber].backgroundColors[screens][letterIndex] = .yellow
                             print("misplaced")
                         }
                         
                     }
-    //                else{
-    //                    octordleKeyboard[index][currentGuessLetter] = Color.black
-    //                    print("wrong")
-    //                }
-                    print("\(currentGuessLetter), \(currentCorrectLetter) \(octordleKeyboard[index][currentGuessLetter] ?? Color.red)")
                 }
-                print(" ")
+                //check to see if the letters are correct or misplaced
+                
+                for letters in currentGuessArray{
+                    if !(misplacedLetters.contains(letters)) && !(correctLetters.contains(letters)){
+                        octordleKeyboard[screens][letters] = Color.gray
+                    }
+                }
+                //if the letters are not correct or misplaced, they are wrong need to be removed
+       
             }
-           
+            //check the guess against all 8 correct words
             
             
+            isEntered[guessNumber] = true
+            //make sure that the letters colors correspond to the keyboard colors
+
+            guessNumber = guessNumber + 1
+            //increase the guess number
+            currentGuess = ""
+            //reset the current guess
+        
         }
         else {
             print("word not possible")

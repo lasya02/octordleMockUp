@@ -15,8 +15,12 @@ struct WordleView: View {
         VStack(alignment: .center) {
             HStack {
                 ForEach (0..<8){index4 in
-                    if index4 == dm.index{
+                    if dm.guessedCorrectly[index4] {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(.green)
+                        .frame(width: 30, height: 20)
+                    }
+                    else if index4 == dm.index{
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(.cyan)
                         .frame(width: 30, height: 20)
                     }
                     else{
@@ -27,11 +31,12 @@ struct WordleView: View {
               
                 }
             }
+            //will indicate what screen the user is on and when one of the individual wordles has been completed 
             
             
             ForEach (0..<13){index4 in
                 HStack(spacing: 2) {
-                    GuessView(integer: index4)
+                    GuessView(rowNumber: index4)
                     
                 }
             }

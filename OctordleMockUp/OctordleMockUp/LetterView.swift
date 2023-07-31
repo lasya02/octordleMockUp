@@ -15,17 +15,27 @@ struct LetterView: View {
             //when the button is pressed the letter should be added to the end of the word
             dm.addToWord(letter)
         } label: {
+            
+            
             Text("\(letter)")
-                .foregroundColor(.black)
                 .font(.system(size: 12))
                 .frame(width: 10,height: 10)
                 .padding(.horizontal,10)
                 .padding(.vertical,10)
-                .background(RoundedRectangle(cornerRadius: 10).fill(dm.octordleKeyboard[dm.index][letter]!))
-                
-                
+                .foregroundColor(.black)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 1)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(dm.octordleKeyboard[dm.index][letter]!).opacity(0.5))
+                )
+            
+    
+            
+            
+            
         }
-
+        .disabled(dm.currentGuess.count == 5)
+        
     }
 }
 

@@ -27,7 +27,7 @@ struct ContentView: View {
                         WordleView(index: 0)
                             .offset(y: -20)
                         KeyboardView()
-                        Text("\(dm.currentGuess)")
+                        //Text("\(dm.currentGuess)")
                     }
                    
                     

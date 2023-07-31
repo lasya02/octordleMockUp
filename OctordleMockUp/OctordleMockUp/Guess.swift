@@ -13,6 +13,14 @@ struct Guess {
     var guessLetters: [String] {
         word.map { String($0) }
     }
+    var backgroundColors = [[Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white],
+                            [Color.white,Color.white,Color.white,Color.white,Color.white]]
     
     
 }
