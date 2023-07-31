@@ -12,6 +12,12 @@
 		A8A579342A701E5900452CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A579332A701E5900452CCB /* Assets.xcassets */; };
 		A8A579372A701E5900452CCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8A579362A701E5900452CCB /* Preview Assets.xcassets */; };
 		A8A5793E2A7022B700452CCB /* WordleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5793D2A7022B700452CCB /* WordleView.swift */; };
+		A8A579402A70473E00452CCB /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5793F2A70473E00452CCB /* Guess.swift */; };
+		A8A579422A704AE000452CCB /* OctordleGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579412A704AE000452CCB /* OctordleGuess.swift */; };
+		A8A579442A706A0700452CCB /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579432A706A0700452CCB /* LetterView.swift */; };
+		A8A579462A716FA900452CCB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579452A716FA900452CCB /* KeyboardView.swift */; };
+		A8A579482A71C46700452CCB /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579472A71C46700452CCB /* GuessView.swift */; };
+		A8A5794A2A71C90A00452CCB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A579492A71C90A00452CCB /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		A8A579332A701E5900452CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8A579362A701E5900452CCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8A5793D2A7022B700452CCB /* WordleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleView.swift; sourceTree = "<group>"; };
+		A8A5793F2A70473E00452CCB /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		A8A579412A704AE000452CCB /* OctordleGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctordleGuess.swift; sourceTree = "<group>"; };
+		A8A579432A706A0700452CCB /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
+		A8A579452A716FA900452CCB /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		A8A579472A71C46700452CCB /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		A8A579492A71C90A00452CCB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 				A8A5792F2A701E5700452CCB /* OctordleMockUpApp.swift */,
 				A8A579312A701E5700452CCB /* ContentView.swift */,
 				A8A5793D2A7022B700452CCB /* WordleView.swift */,
+				A8A579472A71C46700452CCB /* GuessView.swift */,
+				A8A579432A706A0700452CCB /* LetterView.swift */,
+				A8A579452A716FA900452CCB /* KeyboardView.swift */,
+				A8A5793F2A70473E00452CCB /* Guess.swift */,
+				A8A579412A704AE000452CCB /* OctordleGuess.swift */,
+				A8A579492A71C90A00452CCB /* Data.swift */,
 				A8A579332A701E5900452CCB /* Assets.xcassets */,
 				A8A579352A701E5900452CCB /* Preview Content */,
 			);
@@ -140,8 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A579422A704AE000452CCB /* OctordleGuess.swift in Sources */,
 				A8A5793E2A7022B700452CCB /* WordleView.swift in Sources */,
+				A8A579462A716FA900452CCB /* KeyboardView.swift in Sources */,
+				A8A579402A70473E00452CCB /* Guess.swift in Sources */,
+				A8A579482A71C46700452CCB /* GuessView.swift in Sources */,
 				A8A579322A701E5700452CCB /* ContentView.swift in Sources */,
+				A8A579442A706A0700452CCB /* LetterView.swift in Sources */,
+				A8A5794A2A71C90A00452CCB /* Data.swift in Sources */,
 				A8A579302A701E5700452CCB /* OctordleMockUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ struct OctordleMockUpApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(OctordleGuess())
         }
     }
 }
