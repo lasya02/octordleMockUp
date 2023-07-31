@@ -12,7 +12,7 @@ class OctordleGuess: ObservableObject {
     
    
     //hold the guesses for octordle -> 13 options (hold the previously guessed words)
-    var index: Int = 0
+    @Published var index: Int = 0
 //    @Published var keyColors = [String: Color] ()
     var guessNumber: Int = 0
     var currentGuess: String = ""
@@ -91,31 +91,41 @@ class OctordleGuess: ObservableObject {
     }
     
     func enterWord(){
-        let correctWord = correctWords[self.index].map { String($0)}
+        
         let currentGuessArray = currentGuess.map { String($0)}
         
         if verifyWord(){
-            var correctLetters: [String] = []
-//            var misplacedLetters: [String] = []
-            
-            for unclear in 0..<5{
-            
-                let currentGuessLetter = currentGuessArray[unclear]
-                if correctWord[unclear] == currentGuessLetter{
-                    octordleKeyboard[self.index][currentGuessLetter] = .cyan
-                    correctLetters.append(currentGuessLetter)
-                    print("correct")
+            for screens in 0..<8 {
+                let correctWord = correctWords[screens].map { String($0)}
+                var correctLetters: [String] = []
+    //            var misplacedLetters: [String] = []
+                
+                for letterIndex in 0..<5{
+                    let currentGuessLetter = currentGuessArray[letterIndex]
+                    let currentCorrectLetter = correctWord[letterIndex]
+                    if currentCorrectLetter == currentGuessLetter{
+                        octordleKeyboard[screens][currentGuessLetter] = .cyan
+                        correctLetters.append(currentGuessLetter)
+                        print("correct")
+                    }
+                    print("\(correctLetters)")
+                    if correctWord.contains(currentGuessLetter) {
+                        if !(correctLetters.contains(currentGuessLetter)){
+                            print("entered loop correctly")
+                            octordleKeyboard[screens][currentGuessLetter] = Color.yellow
+                            print("misplaced")
+                        }
+                        
+                    }
+    //                else{
+    //                    octordleKeyboard[index][currentGuessLetter] = Color.black
+    //                    print("wrong")
+    //                }
+                    print("\(currentGuessLetter), \(currentCorrectLetter) \(octordleKeyboard[index][currentGuessLetter] ?? Color.red)")
                 }
-                if correctWord.contains(currentGuessLetter) && !correctWord.contains(currentGuessLetter){
-                    octordleKeyboard[self.index][currentGuessLetter] = Color.yellow
-                    print("misplaced")
-                }
-//                else{
-//                    octordleKeyboard[index][currentGuessLetter] = Color.black
-//                    print("wrong")
-//                }
-                print("\(octordleKeyboard[index]), \(octordleKeyboard[index][currentGuessLetter] ?? Color.red)")
+                print(" ")
             }
+           
             
             
         }

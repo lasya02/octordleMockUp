@@ -9,17 +9,32 @@ import SwiftUI
 
 struct WordleView: View {
     @EnvironmentObject var dm: OctordleGuess
-
+    
     var index: Int
     var body: some View {
         VStack(alignment: .center) {
-            Text("\(dm.index)")
-                ForEach (0..<13){index4 in
-                    HStack(spacing: 2) {
-                        GuessView(integer: index4)
-                       
+            HStack {
+                ForEach (0..<8){index4 in
+                    if index4 == dm.index{
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(.green)
+                        .frame(width: 30, height: 20)
                     }
+                    else{
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(.gray)
+                        .frame(width: 30, height: 20)
+                           
+                    }
+              
                 }
+            }
+            
+            
+            ForEach (0..<13){index4 in
+                HStack(spacing: 2) {
+                    GuessView(integer: index4)
+                    
+                }
+            }
         }
         
     }
