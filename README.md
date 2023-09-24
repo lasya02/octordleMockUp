@@ -4,5 +4,14 @@ Octordle is a fun take on the popular word-guessing game, Wordle. Instead of onl
 
 I used to play this game all the time but was never quite able to get the website capability to functon right on my phone so I decided to build an iOS app for it! 
 
-##Demo 
+## Demo 
+
+
+
+
+https://github.com/lasya02/octordleMockUp/assets/84462162/263c7037-891a-4117-895f-aa91c5f2e720
+
+
+
+https://github.com/lasya02/octordleMockUp/assets/84462162/23d1ba09-2808-4e0c-b99a-9dc42921b64a
 
