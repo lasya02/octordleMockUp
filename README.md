@@ -11,6 +11,8 @@ https://github.com/lasya02/octordleMockUp/assets/84462162/23d1ba09-2808-4e0c-b99
 
 
 https://github.com/lasya02/octordleMockUp/assets/84462162/263c7037-891a-4117-895f-aa91c5f2e720
+
+
 (make sure to add a dictionary on your device or emulator in order to ensure the app works as intended) 
 
 
