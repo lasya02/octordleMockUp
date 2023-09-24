@@ -6,12 +6,14 @@ I used to play this game all the time but was never quite able to get the websit
 
 ## Demo 
 
+https://github.com/lasya02/octordleMockUp/assets/84462162/23d1ba09-2808-4e0c-b99a-9dc42921b64a
 
 
 
 https://github.com/lasya02/octordleMockUp/assets/84462162/263c7037-891a-4117-895f-aa91c5f2e720
+(make sure to add a dictionary on your device or emulator in order to ensure the app works as intended) 
 
 
 
-https://github.com/lasya02/octordleMockUp/assets/84462162/23d1ba09-2808-4e0c-b99a-9dc42921b64a
+
 
