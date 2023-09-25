@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "24E25121-D53F-457F-8719-321FCA957BD9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "655AB6F4-5128-4A51-90AA-13F20A891246"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OctordleMockUp/OctordleGuess.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "newGame()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "655AB6F4-5128-4A51-90AA-13F20A891246 - a833f949099db1a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OctordleMockUp.OctordleGuess.newGame() -&gt; ()"
+                  moduleName = "OctordleMockUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasyakambhampati/Desktop/personal%20projects/octordleMockUp/OctordleMockUp/OctordleMockUp/OctordleGuess.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "3323">
+               </Location>
+               <Location
+                  uuid = "655AB6F4-5128-4A51-90AA-13F20A891246 - a833f949099db1a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OctordleMockUp.OctordleGuess.newGame() -&gt; ()"
+                  moduleName = "OctordleMockUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasyakambhampati/Desktop/personal%20projects/octordleMockUp/OctordleMockUp/OctordleMockUp/OctordleGuess.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "3224">
+               </Location>
+               <Location
+                  uuid = "655AB6F4-5128-4A51-90AA-13F20A891246 - a833f949099db165"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OctordleMockUp.OctordleGuess.newGame() -&gt; ()"
+                  moduleName = "OctordleMockUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lasyakambhampati/Desktop/personal%20projects/octordleMockUp/OctordleMockUp/OctordleMockUp/OctordleGuess.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2608">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F04FC8B-1C36-42BF-ADFA-B064AB8FC950"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OctordleMockUp/OctordleGuess.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "newGame()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BE964D3-AB29-4DA5-8059-B343912FE488"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OctordleMockUp/GuessView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "534DE4DE-A4EF-4FDE-B6E0-61A5E224DAD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OctordleMockUp/GuessView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

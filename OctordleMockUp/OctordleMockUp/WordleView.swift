@@ -36,7 +36,7 @@ struct WordleView: View {
             
             ForEach (0..<13){index4 in
                 HStack(spacing: 2) {
-                    GuessView(rowNumber: index4)
+                    GuessView( rowNumber: index4)
                     
                 }
             }
