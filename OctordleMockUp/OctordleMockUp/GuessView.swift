@@ -22,15 +22,16 @@ struct GuessView: View {
                     
                 } label: {
                     //\(dm.guessedWords[rowNumber].guessLetters[character])
-                    Text("\(dm.StringStringMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)")
+                    Text("\(dm.guessedWords[rowNumber].guessLetters[character])")
                         .font(.system(size: 12))
-                        .frame(width: 25,height: 15)
+                        .frame(width: 35,height: 15)
                         .padding(.horizontal,10)
                         .padding(.vertical,10)
                         .foregroundColor(.black.opacity(1.0))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .background(RoundedRectangle(cornerRadius: 10).fill(.white).opacity(0.3)))
+                        .background(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
+//                        .overlay(
+//                            RoundedRectangle(cornerRadius: 10)
+//                                .background(RoundedRectangle(cornerRadius: 10).fill(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!).opacity(0.3)))
                     ////                                .stroke(Color.cyan, lineWidth: 1)
                     ///
                     /////                        .background(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)

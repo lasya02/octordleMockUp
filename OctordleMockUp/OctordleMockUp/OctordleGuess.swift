@@ -23,10 +23,9 @@ class OctordleGuess: ObservableObject {
     var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".map { String($0)}
     
     @Published var letterMatrix =
-    [[[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ]]
+    [   [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ], [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ]]
     
-    @Published var StringStringMatrix = [[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()], [[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],[[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String](),[String:String]()],]
-    
+
     
     //if the game is over or not
     //what the correct word is for this octordle -> array of size 8
@@ -50,13 +49,13 @@ class OctordleGuess: ObservableObject {
             for index2 in 0..<8{
                 for character in letters{
                     letterMatrix[index][index2][String(character)] = .brown
-                    StringStringMatrix[index][index2][String(character)] = String(character)
+                    //StringStringMatrix[index][index2][String(character)] = String(character)
                     
                     //guessedWords[index].letterBackground[index2][String(character)] = .pink
              
                 }
                 letterMatrix[index][index2][" "] = .mint
-                StringStringMatrix[index][index2][" "] = "BL"
+                //StringStringMatrix[index][index2][" "] = "BL"
                 
                 //guessedWords[index].letterBackground[index2][" "] = .green
                 //guessedWords[index].letterBackground[index2][""] = .green
@@ -149,7 +148,7 @@ class OctordleGuess: ObservableObject {
                         guessedWords[guessNumber].letterBackground[screens][currentGuessLetter] = .cyan
                         octordleKeyboard[screens][currentGuessLetter] = .cyan
                         letterMatrix[guessNumber][screens][currentGuessLetter] = .cyan
-                        StringStringMatrix[guessNumber][screens][currentGuessLetter] = "CO"
+                        //StringStringMatrix[guessNumber][screens][currentGuessLetter] = "CO"
                         print("\(String(describing: letterMatrix[guessNumber][screens][currentGuessLetter])), guess number: \(guessNumber), screen: \(screens), current Guess Letter: \(currentGuessLetter)")
                         
                         //guessedWords[guessNumber].letterBackground[currentGuessLetter] = .cyan
@@ -167,7 +166,7 @@ class OctordleGuess: ObservableObject {
                             guessedWords[guessNumber].letterBackground[screens][currentGuessLetter] = .yellow
                             letterMatrix[guessNumber][screens][currentGuessLetter] = .yellow
                             print("\(String(describing: letterMatrix[guessNumber][screens][currentGuessLetter])), guess number: \(guessNumber), screen: \(screens), current Guess Letter: \(currentGuessLetter)")
-                            StringStringMatrix[guessNumber][screens][currentGuessLetter] = "YE"
+                            //StringStringMatrix[guessNumber][screens][currentGuessLetter] = "YE"
                             
                             //guessedWords[guessNumber].letterBackground[currentGuessLetter] = .yellow
                             misplacedLetters.append(currentGuessLetter)
@@ -183,7 +182,7 @@ class OctordleGuess: ObservableObject {
                     if !(misplacedLetters.contains(letters)) && !(correctLetters.contains(letters)){
                         octordleKeyboard[screens][letters] = Color.gray
                         //guessedWords[guessNumber].letterBackground[screens][letters] = .gray
-                        StringStringMatrix[guessNumber][screens][letters] = "GR"
+                        //StringStringMatrix[guessNumber][screens][letters] = "GR"
                         //guessedWords[guessNumber].letterBackground[letters] = .gray
                         letterMatrix[guessNumber][screens][letters] = .gray
                         
