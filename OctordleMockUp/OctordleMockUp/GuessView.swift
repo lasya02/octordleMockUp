@@ -18,42 +18,69 @@ struct GuessView: View {
         HStack{
             ForEach(0...4, id: \.self){character in
                 
-                Button {
-                    
-                } label: {
-                    //\(dm.guessedWords[rowNumber].guessLetters[character])
-                    Text("\(dm.guessedWords[rowNumber].guessLetters[character])")
-                        .font(.system(size: 12))
-                        .frame(width: 35,height: 15)
-                        .padding(.horizontal,10)
-                        .padding(.vertical,10)
-                        .foregroundColor(.black.opacity(1.0))
-                        .background(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .background(RoundedRectangle(cornerRadius: 10).fill(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!).opacity(0.3)))
-                    ////                                .stroke(Color.cyan, lineWidth: 1)
-                    ///
-                    /////                        .background(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
-                    //.foregroundColor(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
-                    
-                    
-                    //
-                    //                        )
-                }
-                .disabled(true)
-                
-//                Text("\(dm.StringStringMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)")
-//                    .foregroundColor(.white)
-//                    .background(.black)
-                
-//                Text("\(String( describing: dm.StringStringMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]))")
+                Text("\(dm.guessedWords[rowNumber].guessLetters[character])")
+                    .font(.system(size: 12))
+                    .frame(width: 35,height: 15)
+                    .padding(.horizontal,10)
+                    .padding(.vertical,10)
+                    .foregroundColor(.black.opacity(1.0))
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(.black, lineWidth: 1)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(dm.letterMatrix[rowNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
+                                    .opacity(0.3))
+                        
+                    )
+                    .clipped()
                    
+                    
                 
-//                print(" from \(String(describing: dm.returnColor(dm.guessedWords[rowNumber].guessLetters[character])))")
-//                    .foregroundColor(.black)
-//                print("from \(String(describing: dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!))")
-//                    .foregroundColor(.black)
+                    
+                
+            
+                
+                
+                //                Button {
+                //                    print("hello")
+                //                } label: {
+                //                    //\(dm.guessedWords[rowNumber].guessLetters[character])
+                //
+                //
+                //                        //.background(dm.letterMatrix[rowNumber ][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
+                //                    //                        .overlay(
+                //                    //                            RoundedRectangle(cornerRadius: 10)
+                //                    //                                .background(RoundedRectangle(cornerRadius: 10).fill(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!).opacity(0.3)))
+                //
+                //
+                //
+                //
+                //
+                //                    ////                                .stroke(Color.cyan, lineWidth: 1)
+                //                    ///
+                //                    /////                        .background(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
+                //                    //.foregroundColor(dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)
+                //
+                //
+                //                    //
+                //                    //                        )
+                //                }
+                //                .disabled(true)
+                //                //.buttonStyle(.plain)
+                //
+                //
+                //                //                Text("\(dm.StringStringMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!)")
+                //                    .foregroundColor(.white)
+                //                    .background(.black)
+                
+                //                Text("\(String( describing: dm.StringStringMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]))")
+                
+                
+                //                print(" from \(String(describing: dm.returnColor(dm.guessedWords[rowNumber].guessLetters[character])))")
+                //                    .foregroundColor(.black)
+                //                print("from \(String(describing: dm.letterMatrix[dm.guessNumber][dm.index][dm.guessedWords[rowNumber].guessLetters[character]]!))")
+                //                    .foregroundColor(.black)
                 
                 
                 

@@ -13,7 +13,7 @@ class OctordleGuess: ObservableObject {
     
     //hold the guesses for octordle -> 13 options (hold the previously guessed words)
     @Published var index: Int = 0
-    var guessNumber: Int = 0
+    @Published var guessNumber: Int = 0
     var currentGuess: String = ""
     var correctWords = [String]()
     var guessedCorrectly = [Bool]()
@@ -48,13 +48,13 @@ class OctordleGuess: ObservableObject {
      
             for index2 in 0..<8{
                 for character in letters{
-                    letterMatrix[index][index2][String(character)] = .brown
+                    letterMatrix[index][index2][String(character)] = .white
                     //StringStringMatrix[index][index2][String(character)] = String(character)
                     
                     //guessedWords[index].letterBackground[index2][String(character)] = .pink
              
                 }
-                letterMatrix[index][index2][" "] = .mint
+                letterMatrix[index][index2][" "] = .white
                 //StringStringMatrix[index][index2][" "] = "BL"
                 
                 //guessedWords[index].letterBackground[index2][" "] = .green
@@ -214,9 +214,17 @@ class OctordleGuess: ObservableObject {
     
     func returnColor(_ letter : String) -> Color{
         //return guessedWords[guessNumber].letterBackground[index][letter] ?? .purple
+        letterMatrix[guessNumber][index][guessedWords[guessNumber].guessLetters[0]]
+        
         return letterMatrix[guessNumber][index][letter]!
         //return dm.guessedWords[guessNumber].letterBackground[screen].guessLetters[character]
     }
+    
+    
+    
+    
+    
+    
     
     
     
