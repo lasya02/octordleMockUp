@@ -12,30 +12,22 @@ struct LetterView: View {
     var letter: String
     var body: some View {
         Button {
-            //when the button is pressed the letter should be added to the end of the word
+            // when the button is pressed the letter should be added to the end of the word
             dm.addToWord(letter)
         } label: {
-            
-            
             Text("\(letter)")
                 .font(.system(size: 12))
-                .frame(width: 10,height: 10)
-                .padding(.horizontal,10)
-                .padding(.vertical,10)
+                .frame(width: 10, height: 10)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 10)
                 .foregroundColor(.black)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 1)
                         .background(RoundedRectangle(cornerRadius: 10).fill(dm.octordleKeyboard[dm.index][letter]!).opacity(0.5))
                 )
-            
-    
-            
-            
-            
         }
         .disabled(dm.currentGuess.count == 5)
-        
     }
 }
 

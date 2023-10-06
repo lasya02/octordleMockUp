@@ -12,77 +12,62 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                HStack{
+                HStack {
                     Button {
                         dm.increaseIndex()
-                        
+
                     } label: {
                         Image(systemName: "triangle.fill")
                             .rotationEffect(Angle(degrees: 270))
                             .foregroundColor(.cyan)
                     }
-                    .offset(y:-60)
-                    
-                    VStack{
+                    .offset(y: -60)
+
+                    VStack {
                         WordleView(index: 0)
                             .offset(y: -20)
                         KeyboardView()
-                        //Text("\(dm.currentGuess)")
+                        // Text("\(dm.currentGuess)")
                     }
-                   
-                    
+
                     Button {
                         dm.decreaseIndex()
-                        
+
                     } label: {
                         Image(systemName: "triangle.fill")
                             .rotationEffect(Angle(degrees: 90))
                             .foregroundColor(.cyan)
                     }
-                    .offset(y:-60)
+                    .offset(y: -60)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                             
-                        } label: {
+                        Button {} label: {
                             Image(systemName: "questionmark.circle")
                                 .foregroundColor(.cyan)
                         }
-
                     }
                     ToolbarItem(placement: .principal) {
-                        Button {
-                             
-                        } label: {
+                        Button {} label: {
                             Text("OCTORDLE")
                                 .font(.headline)
                                 .foregroundColor(.cyan)
                         }
-
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                             
-                        } label: {
+                        Button {} label: {
                             Image(systemName: "chart.bar")
                                 .foregroundColor(.cyan)
                         }
-
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                             
-                        } label: {
+                        Button {} label: {
                             Image(systemName: "gear.circle")
                                 .foregroundColor(.cyan)
                         }
-
                     }
-
                 }
             }
-            
         }
     }
 }

@@ -10,64 +10,57 @@ import SwiftUI
 struct KeyboardView: View {
     @EnvironmentObject var dm: OctordleGuess
 
-    var string1 = "QWERTYUIOP".map{String($0)}
-    var string2 = "ASDFGHJKL".map{String($0)}
-    var string3 = "ZXCVBNM".map{String($0)}
-    //the map makes the string into an array that allows the for each loop to iterate over each of the characters
+    var string1 = "QWERTYUIOP".map { String($0) }
+    var string2 = "ASDFGHJKL".map { String($0) }
+    var string3 = "ZXCVBNM".map { String($0) }
+    // the map makes the string into an array that allows the for each loop to iterate over each of the characters
 
     var body: some View {
-        VStack{
-            HStack(alignment: .center, spacing: 4){
-                ForEach(string1, id: \.self){index1 in
+        VStack {
+            HStack(alignment: .center, spacing: 4) {
+                ForEach(string1, id: \.self) { index1 in
                     LetterView(letter: index1)
-                    
                 }
-                //iterate over each of the characters in the string using the id of self
+                // iterate over each of the characters in the string using the id of self
             }
-            HStack(alignment: .center, spacing: 4){
-                ForEach(string2, id: \.self){index2 in
+            HStack(alignment: .center, spacing: 4) {
+                ForEach(string2, id: \.self) { index2 in
                     LetterView(letter: index2)
-                    
                 }
             }
-            HStack(alignment: .center, spacing: 4){
+            HStack(alignment: .center, spacing: 4) {
                 Button {
                     dm.enterWord()
                 } label: {
                     Text("Enter")
                         .foregroundColor(.black)
                         .font(.system(size: 10))
-                        .frame(width: 26,height: 10)
-                        .padding(.horizontal,10)
-                        .padding(.vertical,10)
+                        .frame(width: 26, height: 10)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.black)))
                 }
                 .disabled(dm.currentGuess.count != 5)
-                //enter button
-               
-                ForEach(string3, id: \.self){index3 in
+                // enter button
+
+                ForEach(string3, id: \.self) { index3 in
                     LetterView(letter: index3)
-                    
                 }
-                
+
                 Button {
                     dm.removeFromWord()
                 } label: {
                     Image(systemName: "delete.backward")
                         .foregroundColor(.black)
                         .font(.system(size: 10))
-                        .frame(width: 26,height: 10)
-                        .padding(.horizontal,10)
-                        .padding(.vertical,10)
+                        .frame(width: 26, height: 10)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color(.black)))
                 }
                 .disabled(dm.currentGuess.isEmpty)
-                //delete button
-
-                
+                // delete button
             }
-            
-            
         }
     }
 }

@@ -14,34 +14,29 @@ struct WordleView: View {
     var body: some View {
         VStack(alignment: .center) {
             HStack {
-                ForEach (0..<8){index4 in
+                ForEach(0..<8) { index4 in
                     if dm.guessedCorrectly[index4] {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(.green)
-                        .frame(width: 30, height: 20)
+                            .frame(width: 30, height: 20)
                     }
-                    else if index4 == dm.index{
+                    else if index4 == dm.index {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(.cyan)
-                        .frame(width: 30, height: 20)
+                            .frame(width: 30, height: 20)
                     }
-                    else{
+                    else {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(.gray)
-                        .frame(width: 30, height: 20)
-                           
+                            .frame(width: 30, height: 20)
                     }
-              
                 }
             }
-            //will indicate what screen the user is on and when one of the individual wordles has been completed 
+            // will indicate what screen the user is on and when one of the individual wordles has been completed
             
-            
-            ForEach (0..<13){index4 in
+            ForEach(0..<13) { index4 in
                 HStack(spacing: 2) {
-                    GuessView( rowNumber: index4)
-                    
+                    GuessView(rowNumber: index4)
                 }
             }
         }
-        
     }
 }
 

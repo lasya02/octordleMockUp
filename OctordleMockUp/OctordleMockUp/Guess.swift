@@ -13,21 +13,4 @@ struct Guess {
     var guessLetters: [String] {
         word.map { String($0) }
     }
-    var letterBackground = [[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color](),[String:Color]() ]
-    
-   
-
-    
-
-    
-    //var backgroundColors = [[Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white],
-//                            [Color.white,Color.white,Color.white,Color.white,Color.white]]
-    
-    
 }
